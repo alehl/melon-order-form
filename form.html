@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<title>Ubermelon Order Form</title>
+  	<link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+  	<h1>Order Now!</h1>
+  	<table>
+  		<tr>
+  			<td class="melon-font">Melon Name</td>
+  			<td class="melon-font">Price per lb.</td>
+  		</tr>
+  		<tr>
+  			<td class="melon-font">Watermelon</td>
+  			<td>$1.59</td>
+  		</tr>
+  		<tr>
+  			<td class="melon-font">Honeydew</td>
+  			<td>$0.99</td>
+  		</tr>
+  		<tr>
+  			<td class="melon-font">Canteloupe</td>
+  			<td>$1.29</td>
+  		</tr>
+  		<tr>
+  			<td class="melon-font">Crenshaw</td>
+  			<td>$2.19</td>
+  		</tr>
+  		<tr>
+  			<td class="melon-font">Canary</td>
+  			<td>$11.99</td>
+  		</tr>
+  	</table>
+  	<br>
+  	<div style="float:right">
+  	<img src="http://www.specialtyproduce.com/sppics/7785.png" alt="This melon, is a Canary melon... Not tweedy!" height="275" width="270">
+  	</div>
+  	<div style="float:right">
+  	<img src="http://www.specialtyproduce.com/sppics/77663.png" alt="A beautiful Crenshaw Melon!" height="273" width="371">
+  	</div>
+  	<br>
+  	<p>Place your orders here! You know you want to.</p>
+  	<form action="https://ubermelon-order-form.herokuapp.com/process" method="POST">
+  		First Name: <input type="text" name="firstname" id="field-firstname"><br>
+  		Last Name: <input type="text" name="lastname" id="field-lastname"><br>
+  		Melon Type: 
+  		<select name="melontype">
+  			<option value="watermelon">Watermelon</option>
+  			<option value="honeydew">Honeydew</option>
+  			<option value="canteloupe">Canteloupe</option>
+  			<option value="crenshaw">Crenshaw</option>
+  			<option value="Canary">Canary</option>
+  		</select><br>
+  		Quantity*: <input type="text" name="quantity" id="field-quantity" required><br>
+  		Delivery time:
+  		<input type="radio" name="time" value="am">AM
+  		<input type="radio" name="time" value="pm">PM
+  		<input type="radio" name="time" value="wat">WAT
+  		<br>
+
+  		Returning Customer?
+  		<input type="radio" name="returning" value="yes">YES
+  		<input type="radio" name="returning" value="no">NO
+  		<br>
+  		Packaging type:
+  		<input type="checkbox" name="packaging" value="paper">Paper
+  		<input type="checkbox" name="packaging" value="plastic">Plastic
+		<br>
+  		For statistical porpoises:
+  		<input type="checkbox" name="stats" value="dog">Dog
+  		<input type="checkbox" name="stats" value="cat">Cat
+  		<input type="checkbox" name="stats" value="hedgehog">Hedgehog
+  		<input type="checkbox" name="stats" value="balloonicorn">Balloonicorn
+  		<input type="checkbox" name="stats" value="yak">Yak
+  		<br>
+  		Your commentary from the peanut gallery!<br>
+
+  		<div class="wallpapered">
+    		<div class="background">Your very important words.</div>
+    			<textarea name="comments"></textarea>
+			</div>
+		<br>
+  		<input type="submit">
+  	</form>
+  	<br>
+  	<footer>
+  		*Quantities given are by the flat
+  	</footer>
+  </body>
+</html>
+
